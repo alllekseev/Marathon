@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  background: rgb(0,10,38);
+  background: radial-gradient(circle, rgba(0,10,38,1) 0%, rgba(177,65,164,1) 40%, rgba(30,113,163,1) 100%);
+  animation: body 10s infinite linear;
+  background-size: 400%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes body {
+  0% {
+    background-position: 80% 0;
+  }
+  50% {
+    background-position: 20% 100%;
+  }
+  100% {
+    background-position: 80% 0;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+}
+
+.slide {
+  height: 80vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  color: #fff;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 500ms ease-in-out;
+}
+
+.slide a {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  /*bottom: 20px;*/
+  /*left: 20px;*/
+  opacity: 0;
+}
+
+.slide.active,
+.slide-link {
+  flex: 10;
+}
+
+.slide.active .slide-link {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.slide-link {
+  /*position: relative;*/
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /*text-decoration: none;*/
+  /*height: 80vh;*/
+  /*color: #ffffff;*/
+  /*font-size: 24px;*/
+  /*border-radius: 20px;*/
+}
+
+.slide-link:hover {
+  background: rgba(27, 27, 29, 0.63);
+}
